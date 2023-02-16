@@ -1,0 +1,119 @@
+/* src/App.css */
+
+/* General Body Styles */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6; /* Light grey-green background */
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main App Container */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure app takes full viewport height */
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #28a745; /* Green header */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+/* Main Content Area */
+.App-main {
+  flex-grow: 1; /* Allows main content to take available space */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between search bar and recipe list */
+}
+
+/* Loading and Error States */
+.loading-message,
+.error-message,
+.no-results-message {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #555;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.error-message {
+  color: #dc3545; /* Red for errors */
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+/* Footer Styles */
+.App-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #6c757d; /* Muted grey for footer text */
+  font-size: 0.9em;
+  border-top: 1px solid #e0e0e0;
+}
+
+.App-footer p {
+  margin: 5px 0;
+}
+
+.App-footer a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.App-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  .App-header h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  .App-header h1 {
+    font-size: 1.5em;
+  }
+
+  .loading-message,
+  .error-message,
+  .no-results-message {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
